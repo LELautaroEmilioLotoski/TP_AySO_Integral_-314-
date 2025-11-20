@@ -30,12 +30,12 @@ do
 	DIR_HOME_GRUPO=$(echo  $LINEA |awk -F ',' '{print $3}')
 
 	FLAG_GRUPO_EXISTE=$(grep $GRUPO /etc/group -c)
-	if [$FLAG_GRUPO_EXISTE == 0 ]; then
+	if [ $FLAG_GRUPO_EXISTE == 0 ]; then
 	   echo "El grupo no existe - crear - valor: $FLAG_GRUPO_EXISTE"
 	   sudo groupadd $GRUPO
 	fi
 
-
+	sudo mkdir -p "$(dirname "$DIR_HOME_GRUPO")"
 	sudo useradd -m -s /bin/bash -g $GRUPO -d ${DIR_HOME_GRUPO} -p "$HASH" $USUARIO
 done
 IFS=$ANT_IFS
