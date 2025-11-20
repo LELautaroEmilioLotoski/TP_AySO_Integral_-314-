@@ -10,6 +10,7 @@ do
 	GRUPO=$(echo  $LINEA |awk -F ',' '{print $2}')
 	DIR_HOME_GRUPO=$(echo  $LINEA |awk -F ',' '{print $3}')
 	sudo userdel -r $USUARIO 
+	sudo groupdel $GRUPO
 done
 IFS=$ANT_IFS
 
