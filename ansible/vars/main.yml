@@ -1,0 +1,18 @@
+---
+# Variables Globales:
+
+Nombre_Grupo: "Nombre-Grupo-Ejemplo"
+
+
+LISTA_GRUPOS:
+  - Nombre: PEPE
+    Apellido: PEREZ
+  - Nombre: PEPE2
+    Apellido: PEREZ2
+
+# R1: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R2: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R3: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R4: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R5: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R6: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
