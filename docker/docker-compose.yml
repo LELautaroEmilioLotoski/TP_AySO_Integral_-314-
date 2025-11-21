@@ -6,4 +6,4 @@ services:
         ports:
             - 
         volumes:
-            - 
+          - ./web/file/:/usr/share/nginx/html/file/  
