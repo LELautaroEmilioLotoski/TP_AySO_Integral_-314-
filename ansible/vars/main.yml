@@ -1,14 +1,16 @@
 ---
 # Variables Globales:
-
+Variable_Vars_main: Algo
 Nombre_Grupo: "Nombre-Grupo-Ejemplo"
 
 
 LISTA_GRUPOS:
   - Nombre: PEPE
     Apellido: PEREZ
+    Rol: R1
   - Nombre: PEPE2
     Apellido: PEREZ2
+    Rol: R2
 
 # R1: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
 # R2: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>

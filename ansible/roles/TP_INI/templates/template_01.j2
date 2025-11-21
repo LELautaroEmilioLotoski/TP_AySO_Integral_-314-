@@ -18,5 +18,7 @@ R5: Nombre:     Apellido:
 R6: Nombre:     Apellido: 
 
 Lista de grupos:
+{% for miembro in LISTA_GRUPOS %}
+{{ miembro.Rol }}: Nombre: {{ miembro.Nombre }}      Apellido: {{ miembro.Apellido }}
+{% endfor %}
 
-{{ LISTA_GRUPOS }}

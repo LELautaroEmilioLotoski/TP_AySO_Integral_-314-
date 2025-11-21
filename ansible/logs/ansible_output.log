@@ -1,0 +1,138 @@
+2025-11-21 01:16:13,732 p=5306 u=vagrant n=ansible | PLAY [testing,produccion] ************************************************************************************************************************************
+2025-11-21 01:16:13,746 p=5306 u=vagrant n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2025-11-21 01:16:15,293 p=5306 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:16:15,387 p=5306 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:16:15,408 p=5306 u=vagrant n=ansible | TASK [include_role : TP_INI] *********************************************************************************************************************************
+2025-11-21 01:16:15,478 p=5306 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] ****************************************************************************************************
+2025-11-21 01:16:15,506 p=5306 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:16:15,516 p=5306 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:16:15,528 p=5306 u=vagrant n=ansible | TASK [TP_INI : Create a directory if it does not exist] ******************************************************************************************************
+2025-11-21 01:16:15,932 p=5306 u=vagrant n=ansible | changed: [vmHost2]
+2025-11-21 01:16:15,952 p=5306 u=vagrant n=ansible | changed: [vmHost1]
+2025-11-21 01:16:15,966 p=5306 u=vagrant n=ansible | TASK [TP_INI : Template a file to /etc/file.conf] ************************************************************************************************************
+2025-11-21 01:16:16,057 p=5306 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'Variable_Vars_main' is undefined"}
+2025-11-21 01:16:16,063 p=5306 u=vagrant n=ansible | fatal: [vmHost1]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'Variable_Vars_main' is undefined"}
+2025-11-21 01:16:16,064 p=5306 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2025-11-21 01:16:16,065 p=5306 u=vagrant n=ansible | vmHost1                    : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:16:16,065 p=5306 u=vagrant n=ansible | vmHost2                    : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:20:18,353 p=5597 u=vagrant n=ansible | PLAY [testing,produccion] ************************************************************************************************************************************
+2025-11-21 01:20:18,360 p=5597 u=vagrant n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2025-11-21 01:20:19,797 p=5597 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:20:19,856 p=5597 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:20:19,875 p=5597 u=vagrant n=ansible | TASK [include_role : TP_INI] *********************************************************************************************************************************
+2025-11-21 01:20:19,938 p=5597 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] ****************************************************************************************************
+2025-11-21 01:20:19,971 p=5597 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:20:19,979 p=5597 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:20:19,989 p=5597 u=vagrant n=ansible | TASK [TP_INI : Create a directory if it does not exist] ******************************************************************************************************
+2025-11-21 01:20:20,369 p=5597 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:20:20,379 p=5597 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:20:20,388 p=5597 u=vagrant n=ansible | TASK [TP_INI : Template a file to /etc/file.conf] ************************************************************************************************************
+2025-11-21 01:20:21,204 p=5597 u=vagrant n=ansible | changed: [vmHost2]
+2025-11-21 01:20:21,220 p=5597 u=vagrant n=ansible | changed: [vmHost1]
+2025-11-21 01:20:21,229 p=5597 u=vagrant n=ansible | TASK [Otra tarea] ********************************************************************************************************************************************
+2025-11-21 01:20:21,256 p=5597 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:20:21,263 p=5597 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:20:21,281 p=5597 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2025-11-21 01:20:21,281 p=5597 u=vagrant n=ansible | vmHost1                    : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:20:21,281 p=5597 u=vagrant n=ansible | vmHost2                    : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:31:50,877 p=5891 u=vagrant n=ansible | PLAY [testing,produccion] ************************************************************************************************************************************
+2025-11-21 01:31:50,886 p=5891 u=vagrant n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2025-11-21 01:31:52,279 p=5891 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:31:52,361 p=5891 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:31:52,381 p=5891 u=vagrant n=ansible | TASK [include_role : TP_INI] *********************************************************************************************************************************
+2025-11-21 01:31:52,445 p=5891 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] ****************************************************************************************************
+2025-11-21 01:31:52,480 p=5891 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:31:52,486 p=5891 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:31:52,498 p=5891 u=vagrant n=ansible | TASK [TP_INI : Create a directory if it does not exist] ******************************************************************************************************
+2025-11-21 01:31:52,887 p=5891 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:31:52,892 p=5891 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:31:52,903 p=5891 u=vagrant n=ansible | TASK [TP_INI : Template a file to /etc/file.conf] ************************************************************************************************************
+2025-11-21 01:31:53,730 p=5891 u=vagrant n=ansible | changed: [vmHost1]
+2025-11-21 01:31:53,731 p=5891 u=vagrant n=ansible | changed: [vmHost2]
+2025-11-21 01:31:53,745 p=5891 u=vagrant n=ansible | TASK [Otra tarea] ********************************************************************************************************************************************
+2025-11-21 01:31:53,773 p=5891 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:31:53,777 p=5891 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:31:53,795 p=5891 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2025-11-21 01:31:53,795 p=5891 u=vagrant n=ansible | vmHost1                    : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:31:53,795 p=5891 u=vagrant n=ansible | vmHost2                    : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:34:19,105 p=6181 u=vagrant n=ansible | PLAY [testing,produccion] ************************************************************************************************************************************
+2025-11-21 01:34:19,113 p=6181 u=vagrant n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2025-11-21 01:34:20,511 p=6181 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:34:20,584 p=6181 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:34:20,606 p=6181 u=vagrant n=ansible | TASK [include_role : TP_INI] *********************************************************************************************************************************
+2025-11-21 01:34:20,675 p=6181 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] ****************************************************************************************************
+2025-11-21 01:34:20,703 p=6181 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:34:20,717 p=6181 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:34:20,727 p=6181 u=vagrant n=ansible | TASK [TP_INI : Create a directory if it does not exist] ******************************************************************************************************
+2025-11-21 01:34:21,119 p=6181 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:34:21,131 p=6181 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:34:21,142 p=6181 u=vagrant n=ansible | TASK [TP_INI : Template a file to /etc/file.conf] ************************************************************************************************************
+2025-11-21 01:34:21,949 p=6181 u=vagrant n=ansible | changed: [vmHost2]
+2025-11-21 01:34:21,960 p=6181 u=vagrant n=ansible | changed: [vmHost1]
+2025-11-21 01:34:21,969 p=6181 u=vagrant n=ansible | TASK [Otra tarea] ********************************************************************************************************************************************
+2025-11-21 01:34:21,994 p=6181 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:34:22,000 p=6181 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:34:22,018 p=6181 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2025-11-21 01:34:22,018 p=6181 u=vagrant n=ansible | vmHost1                    : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:34:22,019 p=6181 u=vagrant n=ansible | vmHost2                    : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:37:52,521 p=6478 u=vagrant n=ansible | - Role roles/Instala-tools_314 was created successfully
+2025-11-21 01:45:44,160 p=6573 u=vagrant n=ansible | PLAY [testing,produccion] ************************************************************************************************************************************
+2025-11-21 01:45:44,168 p=6573 u=vagrant n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2025-11-21 01:45:45,584 p=6573 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:45:45,632 p=6573 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:45:45,651 p=6573 u=vagrant n=ansible | TASK [include_role : TP_INI] *********************************************************************************************************************************
+2025-11-21 01:45:45,716 p=6573 u=vagrant n=ansible | TASK [TP_INI : Rol: TP_INI - Grupo: Nombre-Grupo-Ejemplo] ****************************************************************************************************
+2025-11-21 01:45:45,743 p=6573 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:45:45,757 p=6573 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2025-11-21 01:45:45,765 p=6573 u=vagrant n=ansible | TASK [TP_INI : Create a directory if it does not exist] ******************************************************************************************************
+2025-11-21 01:45:46,136 p=6573 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:45:46,145 p=6573 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:45:46,155 p=6573 u=vagrant n=ansible | TASK [TP_INI : Template a file to /etc/file.conf] ************************************************************************************************************
+2025-11-21 01:45:46,859 p=6573 u=vagrant n=ansible | ok: [vmHost2]
+2025-11-21 01:45:46,892 p=6573 u=vagrant n=ansible | ok: [vmHost1]
+2025-11-21 01:45:46,902 p=6573 u=vagrant n=ansible | TASK [include_role : Instala-tools_314] **********************************************************************************************************************
+2025-11-21 01:45:46,959 p=6573 u=vagrant n=ansible | TASK [Instala-tools_314 : Instalar htop, tmux y speedtest-cli (usando package)] ******************************************************************************
+2025-11-21 01:45:54,006 p=6573 u=vagrant n=ansible | changed: [vmHost1]
+2025-11-21 01:45:54,012 p=6573 u=vagrant n=ansible | changed: [vmHost2]
+2025-11-21 01:45:54,020 p=6573 u=vagrant n=ansible | TASK [Otra tarea] ********************************************************************************************************************************************
+2025-11-21 01:45:54,042 p=6573 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:45:54,049 p=6573 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-11-21 01:45:54,067 p=6573 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2025-11-21 01:45:54,067 p=6573 u=vagrant n=ansible | vmHost1                    : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-21 01:45:54,067 p=6573 u=vagrant n=ansible | vmHost2                    : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
