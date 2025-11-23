@@ -35,7 +35,7 @@ do
 	   sudo groupadd $GRUPO
 	fi
 
-	sudo mkdir -p "$(dirname "$DIR_HOME_GRUPO")"
+	#sudo mkdir -p "$(dirname "$DIR_HOME_GRUPO")"
 	sudo useradd -m -s /bin/bash -g $GRUPO -d ${DIR_HOME_GRUPO} -p "$HASH" $USUARIO
 done
 IFS=$ANT_IFS
