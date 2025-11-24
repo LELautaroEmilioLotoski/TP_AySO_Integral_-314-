@@ -20,5 +20,15 @@ echo "MONTAMOS EL lv_workareas EN /WORK/:"
 
 sudo mount /dev/mapper/vg_datos-lv_workareas /work/
 
+echo "CREAMOS EL LV: lv_docker DE SDC1:"
 
+sudo lvcreate vg_datos -L10M -n lv_docker
+
+echo "FORMATEAMOS EL lv_docker DE SDC1:"
+
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker
+
+echo "MONTAMOS EL /var/lib/docker/:"
+
+sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker/
 
