@@ -4,21 +4,31 @@
 #Variable= {{ Variable_Vars_main |upper }}
 
 Nombre Grupo: {{ Nombre_Grupo }}
-División: 
-Fecha: 
+División: {{ Division }}
+Fecha: {{ '%d-%m-%Y' | strftime }}
 —-------------------------
-Distribución: 
-Cantidad de Cores: 
+Distribución: {{ version_so }}
+Cantidad de Cores: {{ cores_vm }}
 —-------------------------
-R1: Nombre:     Apellido: 
-R2: Nombre:     Apellido: 
-R3: Nombre:     Apellido: 
-R4: Nombre:     Apellido: 
-R5: Nombre:     Apellido: 
-R6: Nombre:     Apellido: 
+{% set roles_expandida = [] %}
 
-Lista de grupos:
 {% for miembro in LISTA_GRUPOS %}
-{{ miembro.Rol }}: Nombre: {{ miembro.Nombre }}      Apellido: {{ miembro.Apellido }}
+  {% for rol in miembro.Rol %}
+    {% set _ = roles_expandida.append({
+      "Rol": rol,
+      "Nombre": miembro.Nombre,
+      "Apellido": miembro.Apellido
+    }) %}
+  {% endfor %}
 {% endfor %}
+
+{% for item in roles_expandida | sort(attribute='Rol') %}
+{{ item.Rol }}: Nombre: {{ item.Nombre }}      Apellido: {{ item.Apellido }}
+{% endfor %}
+
+
+
+
+
+
 

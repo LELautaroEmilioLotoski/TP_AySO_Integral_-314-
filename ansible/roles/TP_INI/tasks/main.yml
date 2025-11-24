@@ -14,5 +14,6 @@
   ansible.builtin.template:
     src: template_01.j2
     dest: /tmp/Grupo/datos.txt
+    owner: vagrant
 
 

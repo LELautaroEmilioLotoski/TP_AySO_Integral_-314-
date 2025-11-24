@@ -1,16 +1,29 @@
 ---
 # Variables Globales:
 Variable_Vars_main: Algo
-Nombre_Grupo: "Nombre-Grupo-Ejemplo"
+Nombre_Grupo: "314"
+Division: "314-2"
+cores_vm: "{{ ansible_processor_vcpus }}"
+version_so: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
 
 
 LISTA_GRUPOS:
-  - Nombre: PEPE
-    Apellido: PEREZ
-    Rol: R1
-  - Nombre: PEPE2
-    Apellido: PEREZ2
-    Rol: R2
+  - Nombre: Lautaro
+    Apellido: Lotoski
+    Rol:
+      - R1
+      - R2
+  - Nombre: Tomas
+    Apellido: Torres
+    Rol:
+      - R2
+      - R5
+  - Nombre: Leonel
+    Apellido: Lopez
+    Rol:
+      - R3
+      - R4
+
 
 # R1: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
 # R2: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
@@ -18,3 +31,4 @@ LISTA_GRUPOS:
 # R4: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
 # R5: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
 # R6: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+

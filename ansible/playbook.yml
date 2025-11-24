@@ -1,10 +1,7 @@
 ---
-- hosts: 
-#  - all
-  - testing
-  - produccion
-
+- hosts: all
   # Variables Globales
+  become: yes
   vars_files:
     - vars/main.yml
 
