@@ -13,7 +13,10 @@
         name: Instala-tools_314
 
     - include_role:
-        name: Alta_Usuarios_314 
+        name: Alta_Usuarios_314
+
+    - include_role:
+        name: Sudoers_314
 
     
     - name: "Otra tarea"
