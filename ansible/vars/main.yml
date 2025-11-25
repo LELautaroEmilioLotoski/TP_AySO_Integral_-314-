@@ -1,7 +1,7 @@
 ---
 # Variables Globales:
 Variable_Vars_main: Algo
-Nombre_Grupo: "314"
+Nombre_Grupo: "grupo_314"
 Division: "314-2"
 cores_vm: "{{ ansible_processor_vcpus }}"
 version_so: "{{ ansible_distribution }} {{ ansible_distribution_version }}"

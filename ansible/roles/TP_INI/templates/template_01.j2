@@ -10,19 +10,8 @@ Fecha: {{ '%d-%m-%Y' | strftime }}
 Distribución: {{ version_so }}
 Cantidad de Cores: {{ cores_vm }}
 —-------------------------
-{% set roles_expandida = [] %}
 
-{% for miembro in LISTA_GRUPOS %}
-  {% for rol in miembro.Rol %}
-    {% set _ = roles_expandida.append({
-      "Rol": rol,
-      "Nombre": miembro.Nombre,
-      "Apellido": miembro.Apellido
-    }) %}
-  {% endfor %}
-{% endfor %}
-
-{% for item in roles_expandida | sort(attribute='Rol') %}
+{% for item in LISTA_GRUPOS | sort(attribute='Rol') %}
 {{ item.Rol }}: Nombre: {{ item.Nombre }}      Apellido: {{ item.Apellido }}
 {% endfor %}
 

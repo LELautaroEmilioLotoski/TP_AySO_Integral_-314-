@@ -32,7 +32,7 @@
 
 - name: Creacion de usuarios (con grupos principales y secundarios + hash)
   become: yes
-  Ansible.builtin.user:
+  ansible.builtin.user:
     name: "{{ item.Rol | lower }}_{{ item.Nombre | lower }}"
     shell: /bin/bash
     password: "{{ pass_hash }}"
