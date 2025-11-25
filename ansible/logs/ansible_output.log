@@ -136,3 +136,5 @@
 2025-11-21 01:45:54,067 p=6573 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************************************************
 2025-11-21 01:45:54,067 p=6573 u=vagrant n=ansible | vmHost1                    : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2025-11-21 01:45:54,067 p=6573 u=vagrant n=ansible | vmHost2                    : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-25 13:29:54,884 p=2449 u=vagrant n=ansible | - Role roles/Alta_Usuarios_314 was created successfully
+2025-11-25 13:30:17,144 p=2455 u=vagrant n=ansible | - Role roles/Sudoers_314 was created successfully

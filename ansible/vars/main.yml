@@ -10,19 +10,27 @@ version_so: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
 LISTA_GRUPOS:
   - Nombre: Lautaro
     Apellido: Lotoski
-    Rol:
-      - R1
-      - R2
+    Rol: R1
   - Nombre: Tomas
     Apellido: Torres
-    Rol:
-      - R2
-      - R5
+    Rol: R2
   - Nombre: Leonel
     Apellido: Lopez
-    Rol:
-      - R3
-      - R4
+    Rol: R3
+  - Nombre: Federico
+    Apellido: Lucero
+    Rol: R4
+  - Nombre: Julian
+    Apellido: Mas
+    Rol: R5
+  - Nombre: Bruno
+    Apellido: Lamas
+    Rol: R6
+  - Nombre: Alvaro
+    Apellido: Toth
+    Rol: R6
+
+
 
 
 # R1: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
