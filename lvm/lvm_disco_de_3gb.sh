@@ -11,7 +11,7 @@ sudo vgcreate vg_temp /dev/sdd1
 
 echo "GENERAMOS EL lv_swap:"
 
-sudo lvcreate vg_temp -L2.5G -n lv_swap
+sudo lvcreate vg_temp -L +2.5G -n lv_swap
 
 echo "FORMATEAMOS EL lv_swap EN SWAP:"
 

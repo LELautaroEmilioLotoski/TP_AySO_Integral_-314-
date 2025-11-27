@@ -10,7 +10,7 @@ sudo vgcreate vg_datos /dev/sdc1
 
 echo "CREAMOS EL lv_workareas DE SDC1:"
 
-sudo lvcreate vg_datos -L2.5G -n lv_workareas
+sudo lvcreate vg_datos -L +2.5G -n lv_workareas
 
 echo "FORMATEAMOS EL lv_workareas:"
 
@@ -22,7 +22,7 @@ sudo mount /dev/mapper/vg_datos-lv_workareas /work/
 
 echo "CREAMOS EL LV: lv_docker DE SDC1:"
 
-sudo lvcreate vg_datos -L10M -n lv_docker
+sudo lvcreate vg_datos -L +10M -n lv_docker
 
 echo "FORMATEAMOS EL lv_docker DE SDC1:"
 
