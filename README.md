@@ -1,5 +1,10 @@
 # TP_AySO_Integral_-314-
 
-CLAVE PUBLICA:
 
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFrzjpyQcM9DSbf427JzP32kvmy6K6Fm1It8Al1XYdps lauti@DESKTOP-QEAPNRC
+- R1: Nombre: Lautaro      Apellido: Lotoski
+- R2: Nombre: Tomas      Apellido: Torres
+- R3: Nombre: Leonel      Apellido: Lopez
+- R4: Nombre: Federico      Apellido: Lucero
+- R5: Nombre: Julian      Apellido: Mas
+- R6: Nombre: Bruno      Apellido: Lamas
+- R6: Nombre: Alvaro      Apellido: Toth

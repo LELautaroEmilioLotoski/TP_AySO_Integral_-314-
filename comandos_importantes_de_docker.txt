@@ -1,0 +1,100 @@
+
+##########################################################################################
+############################### COMANDOS IMPORTANTES DE DOCKER ###########################
+##########################################################################################
+
+
+# CREACION DE IMAGEN A TRAVÉS DE UN DOCKERFILE:
+
+
+    docker build -t <NOMBRE DE LA IMAGEN QUE QUIERAN> . ----> el punto al final le da el path actual
+
+    O CON EL PATH DEL DOCKERFILE:
+
+        docker build -t <NOMBRE DE LA IMAGEN QUE QUIERAN>  /home/vagrant/TP_AySO_Integral_-314-/docker -----> lo mismo que el '.' pero con ruta absoluta
+
+# LEVANTAMOS EL CONTENEDOR INDICANDO EL PUERTO DE NUESTRA PC QUE APUNTE CON EL PUERTO 80 DE NGINX 
+
+    docker run -p <PUERTO>:80 nginx -----> el puerto local (el de la izquierda) es indiferente, mientras no esté usado por otra tarea, se le puede pasar cualquiera. El que no tiene que cambiar
+                                            es el puerto 80 (el de la derecha) de nginx
+
+
+# LEVANTAMOS EL CONTENEDOR INDICANDO EL PUERTO DE NUESTRA PC QUE APUNTE CON EL PUERTO 80 DE NGINX Y ADEMÁS, LE PASAMOS UN ARCHIVO (HTML EN ESTE CASO) AL CONTENEDOR:
+
+    docker run -d -p 8081:80 -v <RUTA DEL ARCHIVO DE NUESTRA PC>:/usr/share/nginx/html --name <NOMBRE QUE QUERRAMOS PONER A LA PAGINA> <NOMBRE DE LA IMAGEN>
+
+# COMO LEVANTAR UNA IMAGEN CON COMPOSE:
+
+    docker compose up -d
+
+# COMO BAJAR UNA IMAGEN CON COMPOSE:
+
+    docker compose down
+
+
+
+##########################################################################################
+
+# INICIAR SESION A DOCKERHUB DESDE LA TERMINAL:
+
+    docker login -u <NOMBRE DE USUARIO>
+
+# CERRAR SESION DE DOCKERHUB DESDE LA TERMINAL:
+
+    docker logout
+
+# PARA VER LAS IMAGENES:
+
+    docker images
+
+# PARA VER LOS CONTENEDORES QUE ESTÁN CORRIENDO ACTUALMENTE:
+
+    docker ps
+
+# PARA VER EL HISTORIAL DE LOS CONTENEDORES CORRIDOS ANTERIORMENTE:
+
+    docker ps -a
+
+# PARA VER EL ID DE LOS CONTENEDORES:
+
+    docker ps -aq
+
+# ELIMINAR TODOS LOS CONTENEDORES:
+
+    docker rm $(docker ps -aq) ---> le pasamos el resultado de obtener todos los id's de los contenedores para poder eliminarlos
+
+# ELIMINAR TODOS LOS CONTENEDORES QUE ESTÁN CORRIENDO ACTUALMENTE:
+
+    docker rm $(docker ps -aq) -f ---> le pasamos el resultado de obtener todos los id's de los contenedores para poder eliminarlos
+
+# COMO PARAR LA EJECUCIÓN DE UN CONTENEDOR:
+
+    docker stop <ID DEL CONTENEDOR>
+
+# COMO ELIMINAR UNA IMAGEN:
+
+    docker rmi <NOMBRE DE LA IMAGEN> ---> o probar con el id de la imagen, tmb funciona
+
+# COMO ELIMINAR TODAS LAS IMAGENES:
+
+    docker rmi $(docker images -q)
+
+
+
+##########################################################################################
+
+
+# OBTENEMOS LA DIRECION IP QUE NOS VA A SERVIR PARA PODER MOSTRAR EL CONTENIDO DE LA PAGINA EN EL NAVEGADOR JUNTO CON EL PUERTO:
+
+
+hostname -I | awk -F " " '{print $2}'
+
+
+    -ejemplo:
+
+
+        http://123.456.78.9:8081/    ---> usamos la ip porque estamos desde una máquina virtual
+
+        ##########-IP-#### -:- ## -PUERTO-##
+
+

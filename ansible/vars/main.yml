@@ -1,0 +1,42 @@
+---
+# Variables Globales:
+Variable_Vars_main: Algo
+Nombre_Grupo: "grupo_314"
+Division: "314-2"
+cores_vm: "{{ ansible_processor_vcpus }}"
+version_so: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+
+LISTA_GRUPOS:
+  - Nombre: Lautaro
+    Apellido: Lotoski
+    Rol: R1
+  - Nombre: Tomas
+    Apellido: Torres
+    Rol: R2
+  - Nombre: Leonel
+    Apellido: Lopez
+    Rol: R3
+  - Nombre: Federico
+    Apellido: Lucero
+    Rol: R4
+  - Nombre: Julian
+    Apellido: Mas
+    Rol: R5
+  - Nombre: Bruno
+    Apellido: Lamas
+    Rol: R6
+  - Nombre: Alvaro
+    Apellido: Toth
+    Rol: R6
+
+
+
+
+# R1: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R2: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R3: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R4: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R5: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+# R6: Nombre: <Tu-Nombre> Apellido: <Tu-Apellido>
+

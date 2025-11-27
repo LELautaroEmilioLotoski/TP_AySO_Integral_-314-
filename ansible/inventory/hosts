@@ -1,0 +1,11 @@
+[all:children]
+testing
+produccion
+
+[testing]
+# 127.0.0.1
+vmHost1 
+
+[produccion]
+#localhost ansible_connection=local 
+vmHost2

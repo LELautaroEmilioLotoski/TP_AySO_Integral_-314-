@@ -1,0 +1,43 @@
+---
+# tasks file for roles/Alta_Usuarios_314
+
+- name: Creacion del grupo secundario
+  become: yes
+  ansible.builtin.group:
+    name: "{{ Nombre_Grupo }}"
+    state: present
+
+- name: Obtener lista de roles sin duplicados
+  ansible.builtin.set_fact:
+    lista_roles: "{{ LISTA_GRUPOS | map(attribute='Rol') | flatten | unique }}"
+
+- name: Creacion de los grupos principales
+  become: yes
+  ansible.builtin.group:
+    name: "G_{{ item }}"
+    state: present
+  loop: "{{ lista_roles }}"
+
+
+- name: Obtenemos el Hash de vagrant
+  become: yes
+  ansible.builtin.command:
+    cmd: "awk -F: '/^vagrant:/ {print $2}' /etc/shadow"
+  register: vagrant_hash
+
+- name: Guardamos el Hash como variable
+  ansible.builtin.set_fact:
+    pass_hash: "{{ vagrant_hash.stdout }}"
+
+
+- name: Creacion de usuarios (con grupos principales y secundarios + hash)
+  become: yes
+  ansible.builtin.user:
+    name: "{{ item.Rol | lower }}_{{ item.Nombre | lower }}"
+    shell: /bin/bash
+    password: "{{ pass_hash }}"
+    group: "G_{{ item.Rol }}"
+    groups: "{{ Nombre_Grupo }}" 
+    append: yes
+  loop: "{{ LISTA_GRUPOS }}"
+
