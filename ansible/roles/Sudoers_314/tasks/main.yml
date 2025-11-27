@@ -1,0 +1,16 @@
+---
+# tasks file for roles/Sudoers_314
+
+- name: Agregar y asegurar que el grupo no necesite clave para sudo.
+  become: yes
+  ansible.builtin.lineinfile:
+    path: "/etc/sudoers.d/{{ Nombre_Grupo }}"
+    line: "%{{ Nombre_Grupo }} ALL=(ALL) NOPASSWD: ALL"
+    create: yes
+    state: present
+    owner: root
+    group: root
+    mode: '0440'
+    validate: /usr/sbin/visudo -cf %s
+
+    

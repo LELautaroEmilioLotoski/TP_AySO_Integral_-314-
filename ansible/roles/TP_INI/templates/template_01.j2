@@ -1,0 +1,23 @@
+#Archivo de ejemplo template ejecutado desde ansible escrito en jinja2
+#https://jinja.palletsprojects.com/en/3.0.x/
+
+#Variable= {{ Variable_Vars_main |upper }}
+
+Nombre Grupo: {{ Nombre_Grupo }}
+División: {{ Division }}
+Fecha: {{ '%d-%m-%Y' | strftime }}
+—-------------------------
+Distribución: {{ version_so }}
+Cantidad de Cores: {{ cores_vm }}
+—-------------------------
+
+{% for item in LISTA_GRUPOS | sort(attribute='Rol') %}
+{{ item.Rol }}: Nombre: {{ item.Nombre }}      Apellido: {{ item.Apellido }}
+{% endfor %}
+
+
+
+
+
+
+
