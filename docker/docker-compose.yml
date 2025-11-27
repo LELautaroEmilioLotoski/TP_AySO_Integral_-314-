@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    image: lautilotoski/tp-div_314_grupo_losfachas  # imagen del lider
+    # image: goohan3242/tp-div_314_grupo_losfachas
+    # image: blamass/tp-div_314_grupo_losfachas
+    ports:
+      - "8081:80"
+    volumes:
+      - ./web/file:/usr/share/nginx/html/file
+
