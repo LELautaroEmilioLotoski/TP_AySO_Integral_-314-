@@ -36,10 +36,6 @@ sudo apt-get update > /dev/null
 echo " Instalo todos los paquetes de docker"
 sudo apt-get install -y  docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-sudo apt-get install -y ansible
-sudo apt-get install -y git
-sudo apt-get install -y Tree 
-
 echo " Añado el grupo docker al usuario"
 sudo usermod -a -G docker vagrant
 
